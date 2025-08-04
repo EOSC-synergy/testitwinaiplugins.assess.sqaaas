@@ -1,0 +1,78 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/PalomoIFCA/testitwinaiplugins:
+      branch: main
+      repo: https://github.com/PalomoIFCA/testitwinaiplugins
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins git:
+        commands:
+        - /usr/bin/env sh .sqa/script.sunny-vermilion-bird.sh
+        container: qc.acc_lovely-wheat-bongo
+  QC.Doc:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.zippy-lavender-okapi.sh
+        container: qc.doc_crabby-grey-mist
+      github.com/PalomoIFCA/testitwinaiplugins git:
+        commands:
+        - /usr/bin/env sh .sqa/script.lousy-malachite-tamarin.sh
+        container: qc.doc_snippy-magenta-chimpanzee
+      github.com/PalomoIFCA/testitwinaiplugins markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-green-moth.sh
+        container: qc.doc_smelly-ecru-bat
+  QC.Lic:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.geeky-periwinkle-deer.sh
+        container: qc.lic_goopy-cinnabar-caterpillar
+  QC.Met:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.randy-peach-worm.sh
+        container: qc.met_jumpy-buff-setter
+  QC.Sec:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaky-viridian-beaver.sh
+        container: qc.sec_freaky-ecru-gopher
+  QC.Sty:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-turquoise-crab.sh
+        container: qc.sty_fuzzy-indigo-quoll
+      github.com/PalomoIFCA/testitwinaiplugins hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-jade-chamois.sh
+        container: qc.sty_gamy-linen-blue
+      github.com/PalomoIFCA/testitwinaiplugins jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-teal-kangaroo.sh
+        container: qc.sty_homely-cornflower-goat
+  QC.Uni:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.woolly-myrtle-bullfrog.sh
+        container: qc.uni_lovely-rust-flounder
+  QC.Ver:
+    repos:
+      github.com/PalomoIFCA/testitwinaiplugins get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.snippy-aquamarine-raccoon.sh
+        container: qc.ver_homey-plum-bat
+timeout: 5400
