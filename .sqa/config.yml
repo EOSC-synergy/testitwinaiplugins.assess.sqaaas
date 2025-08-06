@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/Ophidia
+      branch: main
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/PalomoIFCA/testitwinaiplugins:
       branch: main
@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins git:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-jade-opossum.sh
-        container: qc.acc_sleazy-cornflower-moth
+        - /usr/bin/env sh .sqa/script.hasty-harlequin-zonkey.sh
+        container: qc.acc_lousy-smalt-salamander
   QC.Doc:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.tasty-aquamarine-devil.sh
-        container: qc.doc_seedy-beige-bongo
+        - /usr/bin/env sh .sqa/script.grumpy-persimmon-starfish.sh
+        container: qc.doc_slimy-asparagus-neanderthal
       github.com/PalomoIFCA/testitwinaiplugins git:
         commands:
-        - /usr/bin/env sh .sqa/script.chummy-lemon-starfish.sh
-        container: qc.doc_boozy-chocolate-tiger
+        - /usr/bin/env sh .sqa/script.sloppy-persimmon-ladybird.sh
+        container: qc.doc_wheezy-brass-wildebeest
       github.com/PalomoIFCA/testitwinaiplugins markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.messy-tangerine-ostrich.sh
-        container: qc.doc_shaky-cerise-gerbil
+        - /usr/bin/env sh .sqa/script.beady-plum-dolphin.sh
+        container: qc.doc_queasy-firebrick-moorhen
   QC.Lic:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.breezy-tomato-zebu.sh
-        container: qc.lic_hazy-charcoal-yak
+        - /usr/bin/env sh .sqa/script.wheezy-viridian-duck.sh
+        container: qc.lic_pokey-heliotrope-lemur
   QC.Met:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.foggy-taupe-paradise.sh
-        container: qc.met_flabby-periwinkle-hornet
+        - /usr/bin/env sh .sqa/script.bluesy-champagne-bulldog.sh
+        container: qc.met_pretty-ecru-bandicoot
   QC.Sec:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.lumpy-lilac-dunker.sh
-        container: qc.sec_snippy-cardinal-cuscus
+        - /usr/bin/env sh .sqa/script.randy-purple-coati.sh
+        container: qc.sec_squeaky-magnolia-vulture
   QC.Sty:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.leaky-silver-wolfhound.sh
-        container: qc.sty_sleazy-chestnut-squirt
+        - /usr/bin/env sh .sqa/script.gamy-chestnut-terrier.sh
+        container: qc.sty_scaly-purple-nightingale
       github.com/PalomoIFCA/testitwinaiplugins hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-dandelion-walrus.sh
-        container: qc.sty_skimpy-blue-sheep
+        - /usr/bin/env sh .sqa/script.surly-maroon-capuchin.sh
+        container: qc.sty_tacky-brown-wolfhound
       github.com/PalomoIFCA/testitwinaiplugins jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.clammy-ivory-wolverine.sh
-        container: qc.sty_lovely-brown-crane
+        - /usr/bin/env sh .sqa/script.muzzy-cardinal-slug.sh
+        container: qc.sty_squeaky-orchid-chinook
   QC.Uni:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.crabby-burgundy-dhole.sh
-        container: qc.uni_muzzy-vermilion-forest
+        - /usr/bin/env sh .sqa/script.hilly-platinum-bullfrog.sh
+        container: qc.uni_baggy-lemon-armadillo
   QC.Ver:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.flabby-goldenrod-snake.sh
-        container: qc.ver_smelly-scarlet-boar
+        - /usr/bin/env sh .sqa/script.muggy-vermilion-civet.sh
+        container: qc.ver_slaphappy-violet-seal
 timeout: 5400
