@@ -2,7 +2,7 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: main
+      branch: feature/Ophidia
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/PalomoIFCA/testitwinaiplugins:
       branch: main
@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins git:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-harlequin-zonkey.sh
-        container: qc.acc_lousy-smalt-salamander
+        - /usr/bin/env sh .sqa/script.hazy-seashell-wolfhound.sh
+        container: qc.acc_woozy-maroon-spider
   QC.Doc:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.grumpy-persimmon-starfish.sh
-        container: qc.doc_slimy-asparagus-neanderthal
+        - /usr/bin/env sh .sqa/script.chewy-scarlet-panda.sh
+        container: qc.doc_skinny-violet-fowl
       github.com/PalomoIFCA/testitwinaiplugins git:
         commands:
-        - /usr/bin/env sh .sqa/script.sloppy-persimmon-ladybird.sh
-        container: qc.doc_wheezy-brass-wildebeest
+        - /usr/bin/env sh .sqa/script.pasty-asparagus-wallaby.sh
+        container: qc.doc_sleepy-bronze-donkey
       github.com/PalomoIFCA/testitwinaiplugins markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.beady-plum-dolphin.sh
-        container: qc.doc_queasy-firebrick-moorhen
+        - /usr/bin/env sh .sqa/script.nerdy-blue-chameleon.sh
+        container: qc.doc_shaggy-grey-beetle
   QC.Lic:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.wheezy-viridian-duck.sh
-        container: qc.lic_pokey-heliotrope-lemur
+        - /usr/bin/env sh .sqa/script.gummy-smalt-echidna.sh
+        container: qc.lic_scummy-black-owl
   QC.Met:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-champagne-bulldog.sh
-        container: qc.met_pretty-ecru-bandicoot
+        - /usr/bin/env sh .sqa/script.slaphappy-azure-collie.sh
+        container: qc.met_snoopy-tan-spitz
   QC.Sec:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.randy-purple-coati.sh
-        container: qc.sec_squeaky-magnolia-vulture
+        - /usr/bin/env sh .sqa/script.bluesy-amaranth-squid.sh
+        container: qc.sec_lovely-pink-turtle
   QC.Sty:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gamy-chestnut-terrier.sh
-        container: qc.sty_scaly-purple-nightingale
+        - /usr/bin/env sh .sqa/script.beady-lavender-audemer.sh
+        container: qc.sty_jumpy-purple-walrus
       github.com/PalomoIFCA/testitwinaiplugins hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.surly-maroon-capuchin.sh
-        container: qc.sty_tacky-brown-wolfhound
+        - /usr/bin/env sh .sqa/script.jumpy-linen-penguin.sh
+        container: qc.sty_wheezy-brown-mist
       github.com/PalomoIFCA/testitwinaiplugins jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-cardinal-slug.sh
-        container: qc.sty_squeaky-orchid-chinook
+        - /usr/bin/env sh .sqa/script.pasty-yellow-rat.sh
+        container: qc.sty_crabby-cream-drever
   QC.Uni:
     repos:
-      github.com/PalomoIFCA/testitwinaiplugins pytest:
+      github.com/PalomoIFCA/testitwinaiplugins commands:
         commands:
-        - /usr/bin/env sh .sqa/script.hilly-platinum-bullfrog.sh
-        container: qc.uni_baggy-lemon-armadillo
+        - /usr/bin/env sh .sqa/script.queasy-teal-discus.sh
+        container: qc.uni_squirrely-tomato-alligator
   QC.Ver:
     repos:
       github.com/PalomoIFCA/testitwinaiplugins get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.muggy-vermilion-civet.sh
-        container: qc.ver_slaphappy-violet-seal
+        - /usr/bin/env sh .sqa/script.sleepy-orchid-dollar.sh
+        container: qc.ver_shaky-salmon-moth
 timeout: 5400
