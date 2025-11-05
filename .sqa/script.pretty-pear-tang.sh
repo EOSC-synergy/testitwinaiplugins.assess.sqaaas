@@ -5,5 +5,5 @@
 
 (
 cd github.com/PalomoIFCA/testitwinaiplugins &&
-    python -m venv .venv ; source .venv/bin/activate ; .venv/bin/pip install . ; .venv/bin/pytest -v tests/
+    python3 -m venv .venv ; source .venv/bin/activate ; .venv/bin/pip install . ; .venv/bin/pytest -v tests/
 )
