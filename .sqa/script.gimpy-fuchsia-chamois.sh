@@ -5,5 +5,5 @@
 
 (
 cd github.com/PalomoIFCA/testitwinaiplugins &&
-    hadolint Dockerfile --failure-threshold error
+    python -m venv .venv ; source .venv/bin/activate ; .venv/bin/pip install . ; .venv/bin/pytest -v tests/
 )

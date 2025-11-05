@@ -5,5 +5,5 @@
 
 (
 cd github.com/PalomoIFCA/testitwinaiplugins &&
-    pytest  --json-report  --json-report-indent 4
+    hadolint env-files/Dockerfile --failure-threshold error
 )
